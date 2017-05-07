@@ -19,15 +19,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'v1'], function () {
     Route::resource('customers', 'CustomerController');
+    Route::resource('pictures', 'PictureController');
 });
 
 Route::group(['prefix' => 'v2'], function () {
     Route::resource('customers', 'CustomerController');
+    Route::resource('pictures', 'PictureController');
 });
 
 Route::group(['prefix' => 'v3'], function () {
     Route::get('customers/{id}/addresses', 'CustomerController@addresses');
-    Route::resource('customers', 'CustomerController');
 
+    Route::resource('customers', 'CustomerController');
     Route::resource('addresses', 'AddressController');
+    Route::resource('pictures', 'PictureController');
 });
