@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Transformers\Models\AddressTransformer;
 
 class AddressController extends ApiController

@@ -29,6 +29,5 @@ Route::group(['prefix' => 'v3'], function () {
     Route::get('customers/{id}/addresses', 'CustomerController@addresses');
     Route::resource('customers', 'CustomerController');
 
-
     Route::resource('addresses', 'AddressController');
 });
