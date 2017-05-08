@@ -30,7 +30,7 @@ class PictureController extends ApiController
         $uploadSuccess = false;
         if (!is_null($image)) {
 
-            $destinationPath = public_path() . '/uploads/customers/'.$vo->id.'/';
+            $destinationPath = public_path() . '/uploads/customers/';
             //            $filename = $brandImage->getClientOriginalName();
             $fileExtension = $image->getClientOriginalExtension();
 
