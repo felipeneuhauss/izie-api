@@ -31,7 +31,7 @@ $factory->define(App\Models\Customer::class, function (Faker\Generator $faker) {
     return ['name' => $faker->name,
         'birthday' => $faker->date,
         'gender' => $gender[rand(0,1)],
-        'picture' => null,
+        'picture_id' => null,
         'cpf' => $faker->numerify('###.###.###-##'),
         'email' => $faker->email,
         'user_id' => 1,

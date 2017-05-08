@@ -18,7 +18,6 @@ class CreateCustomersTable extends Migration
             $table->string('name');
             $table->date('birthday');
             $table->enum('gender', ['male', 'female']);
-            $table->string('picture')->nullable();
             $table->string('cpf')->nullable();
             $table->string('email')->nullable();
             $table->integer('user_id')->unsigned()->comment('Usuário');
