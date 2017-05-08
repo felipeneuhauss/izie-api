@@ -37,7 +37,7 @@ class CustomerTransformer extends AbstractTransformer
             'original_birthday' => $item->birthday->format('Y-m-d'),
             'cpf' => $item->cpf,
             'email' => $item->email,
-            'picture' => is_object($item->picture) ? public_path() . '/uploads/customers/'.$item->picture->name : null,
+            'picture' => is_object($item->picture) ? url('/uploads/customers/'.$item->picture->name) : null,
         ];
         return $row;
     }
