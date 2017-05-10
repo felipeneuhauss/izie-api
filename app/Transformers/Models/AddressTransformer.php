@@ -33,8 +33,9 @@ class AddressTransformer extends AbstractTransformer
             'number' => $item->number,
             'complement' => $item->complement,
             'city_id' => $item->city_id,
+            'state_id' => $item->city ? $item->city->state->id : null,
             'city' => $item->city->name,
-            'location' => $item->city ? $item->city->name . ' - '.$item->city->state->initials : '-'
+            'location' => $item->city ? $item->city->name . ' - '.$item->city->state->initials : null
         ];
 
         return $row;
