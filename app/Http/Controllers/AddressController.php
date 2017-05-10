@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Traits\RestfulMethods;
 use App\Transformers\Models\AddressTransformer;
 
 class AddressController extends ApiController
 {
 
+    use RestfulMethods;
     /**
      * Create a new controller instance.
      *
