@@ -18,7 +18,7 @@ class CustomerTransformer extends AbstractTransformer
         'name' => 'name',
         'birthday' => 'birthday',
         'gender' => 'gender',
-        'picture' => 'picture',
+        'picture_id' => 'picture_id',
         'cpf' => 'cpf',
         'email' => 'email',
         'user_id' => 'user_id',
@@ -30,7 +30,7 @@ class CustomerTransformer extends AbstractTransformer
         $row =  [
             'id' => $item->id,
             'name' => $item->name,
-            'gender' => $item->gender,
+            'gender' => $gender[$item->gender],
             'created_at' => $item->created_at->format('d/m/Y'),
             'updated_at' => $item->updated_at->format('d/m/Y'),
             'birthday' => $item->birthday->format('d/m/Y'),
