@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Address;
 use App\Traits\RestfulMethods;
 use App\Transformers\Models\AddressTransformer;
+use Illuminate\Support\Facades\Validator;
 
 class AddressController extends ApiController
 {
@@ -25,7 +26,7 @@ class AddressController extends ApiController
 
     public function _validate($vo, $request)
     {
-        return Validator::make(Request::all(), ['customer_id' => 'required|integer',
+        return Validator::make($request->all(), ['customer_id' => 'required|integer',
             'zip_code' => 'required|max:9',
             'address' => 'required|max:255',
             'complement' => 'max:255',
