@@ -29,8 +29,10 @@ Route::group(['prefix' => 'v2'], function () {
 
 Route::group(['prefix' => 'v3'], function () {
     Route::get('customers/{id}/addresses', 'CustomerController@addresses');
+    Route::get('states/{id}/cities', 'StateController@cities');
 
     Route::resource('customers', 'CustomerController');
     Route::resource('addresses', 'AddressController');
     Route::resource('pictures', 'PictureController');
+    Route::resource('states', 'StateController');
 });
